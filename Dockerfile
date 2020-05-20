@@ -1,6 +1,9 @@
 #Downloading jre image
 FROM openjdk:8-jre-alpine
 
+#Adding the bash package to image
+RUN apk add --no-cache bash
+
 #Coping jar file to main directory
 COPY target/demo-0.0.1-SNAPSHOT.jar /app.jar
 
