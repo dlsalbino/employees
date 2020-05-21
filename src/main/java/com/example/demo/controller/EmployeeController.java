@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.entity.Employee;
+import com.example.demo.model.Employee;
 import com.example.demo.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +17,7 @@ public class EmployeeController {
     private final EmployeeService employeeService;
 
     @GetMapping
-    Collection<Employee> list(){
+    Collection<Employee> list() {
         return employeeService.listAll();
     }
 
